@@ -1,0 +1,51 @@
+.site-footer {
+    background: darken($color__secondary, 3%);
+    max-width: 100%;
+    padding: #{4 * $spacing__unit} 0;
+    width: 100%;
+
+    > * {
+        margin-left: auto;
+        margin-right: auto;
+        @include contentWidth();
+    }
+
+    .social-links {
+        color: $color__secondary-text;
+        flex-direction: row;
+        font-size: $font__size-lg;
+
+        .link {
+            margin-right: $spacing__unit;
+
+            a {
+                border: 1px solid $color__secondary-text;
+                border-radius: 4px;
+                color: inherit;
+                display: block;
+                padding: #{0.5 * $spacing__unit} #{0.8 * $spacing__unit};
+                text-decoration: none;
+
+                &:hover {
+                    background: $color__primary;
+                    border: 0;
+                    transition: all $button__transition;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .copy {
+        color: $color__accent;
+        margin-top: #{2 * $spacing__unit};
+        text-align: center;
+
+        span {
+            font-weight: 700;
+        }
+    }
+}

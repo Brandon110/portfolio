@@ -1,0 +1,79 @@
+.text-title {
+    color: $color__heading;
+    font-size: $font__size-lg;
+    margin-bottom: #{4 * $spacing__unit};
+    text-align: center;
+
+    @include media(tablet) {
+        font-size: $font__size-xl;
+    }
+
+    .text {
+        display: inline-block;
+        font-weight: 900;
+        padding: 0 0 $spacing__unit 0;
+        position: relative;
+        text-transform: uppercase;
+ 
+        &:after {
+            content: '';
+            background: #ccc;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            width: 100%;
+        }
+    }
+}
+
+.label {
+    color: $color__text-main;
+    font-size: $font__size-md;
+}
+
+.info-msg {
+    font-size: $font__size-sm;
+    font-weight: 700;
+    margin-bottom: $spacing__unit;
+    padding: $spacing__unit;
+    width: 100%;
+}
+
+.error-msgs {
+    background:#ff7f7f;
+    color: #cc0000;
+}
+
+.success-msg {
+    background: #99ff99;
+    color: #009900;
+    text-align: center;
+}
+
+.loading {
+    font-size: $font__size-md;
+    padding: $spacing__unit;
+}
+
+button.button,
+a.button,
+input.button {
+    background: transparent;
+    border: 2px solid $color__primary-text;
+    border-radius: 3px;
+    color: $color__primary-text;
+    cursor: pointer;
+    display: inline-block;
+    font-size: $font__size-lg;
+    font-weight: 400;
+    padding: #{0.65 * $spacing__unit} $spacing__unit;
+    text-decoration: none;
+
+    &:hover {
+        background: $color__primary;
+        border-color: $color__primary;
+        transition: all $button__transition;
+    }
+}

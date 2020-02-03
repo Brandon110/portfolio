@@ -1,0 +1,109 @@
+.about-section {
+    height: 100%;
+
+    .about-me-wrapper {
+        align-items: flex-start;
+        padding-bottom: #{2 * $spacing__unit};
+
+        .my-attributes {
+            margin: 0 auto;
+            flex-basis: 100%;
+    
+            .attribute {
+                padding: $spacing__unit;
+
+                @include media(tablet) {
+                    border-bottom: 1px solid #ccc;
+                    margin-left: #{4 * $spacing__unit};
+                    padding: #{2 * $spacing__unit} $spacing__unit;
+                }
+
+                i {
+                    color: $color__primary;
+                    font-size: 74px;
+                    fill: $color__primary-text;
+                    display: block;
+                    line-height: normal;
+                    margin: 0 auto;
+                }
+    
+                .attribute-text {
+                    text-align: center;
+
+                    @include media(tablet) {
+                        flex-basis: 100%;
+                        margin-left: #{2 * $spacing__unit};
+                        text-align: left;
+                    }
+    
+                    .attribute-label {
+                        font-size: $font__size-md;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        .me {
+            flex-basis: 100%;
+
+            .img-of-me {
+                border-radius: 50%;
+                display: block;
+                object-fit: cover;
+                height: 250px;
+                width: 250px;
+            }
+        
+            .description-of-me {
+                font-size: $font__size-md;
+                text-align: center;
+                width: 100%;
+            }
+        }
+    }
+
+    ul.bar-graphs {
+        flex-wrap: wrap;
+        list-style: none;
+        margin: #{2 * $spacing__unit} 0 0 0;
+        padding: 0;
+
+        li {
+            padding: $spacing__unit 0;
+            width: 100%;
+
+            @include media(tablet) {
+                padding: $spacing__unit;
+                width: 33.333%;
+            }
+
+            .bar-label {
+                font-size: $font__size-md;
+                opacity: .85;
+            }
+
+            .bar {
+                background: lighten($color__primary, 15%);
+                font-size: $font__size-md;
+                height: 26px;
+                position: relative;
+
+                span {
+                    color: $color__primary-text;
+                    font-weight: 700;
+                    position: absolute;
+                    right: 5px;
+                    top: auto;
+                    bottom: auto;
+                    margin: auto;
+                }
+
+                .bar-color {
+                    background: $color__primary;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@mixin contentWidth() {
+    max-width: calc(100% - (2 * #{$spacing__unit}));
+    width: 100%;
+
+    @include media(tablet) {
+        width: 80%;
+    }
+}
+
+@import 'utils';

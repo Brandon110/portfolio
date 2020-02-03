@@ -1,0 +1,128 @@
+.projects-section {
+    background: #f1f1f1;
+    height: 100%;
+
+    .projects-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .project {
+            flex-grow: 1;
+            height: 368px;
+            margin-bottom: $spacing__unit;
+            overflow: hidden;
+            padding: $spacing__unit;
+            position: relative;
+            width: 100%;
+
+            @include media(tablet) {
+                margin-right: 1%;
+                width: 49%;
+
+                &:nth-child(2n),
+                &:last-child(2n) {
+                    margin-right: 0;
+                }
+            }
+
+            @include media(desktop) {
+                width: 32.333%;
+
+                &:nth-child(2n) {
+                    margin-right: 1%;
+                }
+
+                &:nth-child(3n),
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            &:hover {
+                
+                .overlay {
+                    background: rgba(0, 0, 0, 0.85);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: all $background__transition;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 999;
+                }
+
+                .project-info {
+                    opacity: 1;
+                    position: relative;
+                    transition: all $background__transition;
+                    z-index: 9999;
+                }
+
+                .project-img {
+                    transform: scale(1.4);
+                    transition: all $background__transition;
+                }
+            }
+
+            .project-img {
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .project-info {
+                color: #fff;
+                opacity: 0;
+                text-decoration: none;
+                text-align: center;
+  
+                .project-label {
+                    font-size: $font__size-md;
+                    font-weight: 700;
+                    margin-bottom: $spacing__unit;
+                }
+
+                .project-description {
+                    font-size: $font__size-sm;
+                }
+
+                .techs {
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    font-size: $font__size-xs;
+                    margin-top: $spacing__unit;
+
+                    .tech {
+                        color: $color__accent;
+                        margin-right: #{0.5 * $spacing__unit};
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+                .project-links {
+                    color: $color__primary;
+                    display: block;
+                    margin-top: $spacing__unit;
+                    text-transform: uppercase;
+
+                    a {
+                        color: inherit;
+                    }
+
+                    .live {
+                        margin-right: #{2 * $spacing__unit};
+                    }
+                }
+
+            }
+
+        }
+    }
+
+}

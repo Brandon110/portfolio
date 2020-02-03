@@ -1,0 +1,40 @@
+.site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    @include contentWidth();
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-row {
+
+    @include media(tablet) {
+        flex-direction: row;
+    }
+}
+
+.screen-reader-text {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    clip: rect(1px 1px 1px 1px); // IE 6 and 7
+    clip: rect(1px,1px,1px,1px);
+    clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    overflow: hidden !important;
+}
